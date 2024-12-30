@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML5</title>
+</head>
+
+<body>
+    <h1>Formularios HTML</h1>
+    Los formularios en HTML, son elementos que nos van a dotar de cierta funcionalidad y dinamismo
+    a nuestras paginas web.
+    Nos vana a permitir interactuar con nuestras paginas web y por lo tanto son elementos fundamentales
+    <br> para recoger informacion para posteriormente gestionarla.
+    <br>Los formularios nos van a permitir dos tipos de funcionalidades principales:
+    <ul>
+        <li>Recoger informacion</li>
+        <li>Los formularios que se han guardado para posteriormente procesarlos o para poder realizar cualqier tipo
+            de operacion que se requiera con ellos.
+        </li>
+    </ul>
+    <br>Los principales objetivos que tenemos que tener en cuenta a la hora de diseniar un formulario HTML,
+    <br> son los siguientes:
+    <ul>
+        <li>El formulario tiene que ser los mas sencillos posible a la hora de insertar datos por parte del usuario</li>
+        <li>La experiencia del usuario/usabilidad(UX) tiene que ser los mas agradable posible</li>
+        <li>Los datos introducidos en los formularios, tiene que tener un formato predecible y esperado
+            <br>P.E Si vamos a introducir el nombre de usuario, facilitaremos al usuario la ubicacion donde debe
+            colocarlo.
+        </li>
+        <li>Reducir los errores al introducir los datos en la medidad de los posible y comunicar claramente al usuario
+            <br>si esta dando algun tipo de erros al introducirlos...
+        </li>
+    </ul>
+    <h2>Etiquetas basicas para la creacion de un Formulario en html</h2>
+    Para crear un formulario en HTML, utilizaremos la etiqueta <b>form</b> con apertura y cierre.
+    A parte de utilizar la etiqueta form, que establece que se va a usar/crear un formulario, tenemos que tener
+    <br>en cuenta una serie de propiedades que vamos a usar con ella:
+    <ul>
+        <li><b>action</b>: Indica la URL o BBDD, web, correo... (Direccion Backend) a la que queremos enviar
+            <br>la informacion de nuestro formulario.
+        </li>
+        <li><b>method</b>: Metodo puede ser <b>get</b> o <b>post</b>. Get se utiliza cuando queremos
+            <br>mostrar la indormacion que se envia de nuestro formulario a traves del protocolo HTTP/HTTPS de nuestras
+            <br>web.
+            <br> Post se utiliza cuando queremos ocultar la informacion que se envia de nuestro formulario a traves del
+            <br> protocolo HTTP/HTTPS de nuestras web.
+        </li>
+        <li><b>name</b>: se utiliza para dar un nombre al formulario</li>
+        <li><b>target</b>: se utiliza para abrir el formulario en una pestamia nueva (target=_blank)</li>
+        <li><b>entype</b>: codificacion de informacion mediante token.</li>
+        <li><b>autocomplete</b>:Tiene una funcion on/off que sirve para activar y desactivar el autocompletado de
+            <br>nuestra web.
+        </li>
+    </ul>
+    <h4>Ejemplo</h4>
+    <form action="mailto:rail.rodriguez@proeducaglobal.com" method="post" autocomplete="on" target="_blank">
+        Nombre de alumno: <input type="text">
+        <br><input type="submit" value="Enviar">
+    </form>
+    <h2>Tipos de datos que podemos gestionar en un Formulario de HTML</h2>
+    <br>En un formluario, podemos gestionar cualquier tipo de informacion que se requiera. Pero los mas
+    <br>utilizados o que vamos a ustilizar mas, son los siguientes:
+    <ul>
+        <li>Informacion de texto: Nombres, Apellidios, direcciones fisicas, etc. Para esto, utilizaremos
+            <br>la etiqueta input y textarea (input type=text y el textarea con etiqueta de apertura y cierre).
+        </li>
+        <li>Numeros y cantidades: precios, edades, cuantias, etc.Utilizaremos el elemento input del tipo
+            <br>number (input type=number)
+        </li>
+        <li>Fechas y horas: Fechas de nacimiento, calendarios, etc. Utilizaremos el input date, input week, etc
+        </li>
+        <li>Opciones de verdadero o falso: Utilizaremos el tipo input type=checkbox</li>
+        <li>Opciones unicas: podremos elegir entre dos o mas opciones. input type = radio o la etiqueta select</li>
+        <li>Opciones unicas simples: donde utilizaremos el select multiple, input checkbox, etc</li>
+        <li>Opciones de listas abiertas: datalist</li>
+        <li>Seleccionar colores: input type=color</li>
+        <li>Seleccionas un archivo: input type=file</li>
+    </ul>
+    <h3>Ejemplos de las etiquetas de entrada de datos en Formularios HTML</h3>
+    <form action="mailto:raul.rodriguez@proeducaglobal.com">
+        Entrada de texto: <input type="text" name="" id="">
+        <br>Texto de busqueda: <input type="search" name="" id="">
+        <br>Introducir direccion URL: <input type="url" name="" id="">
+        <br>Introducir numero de telefono: <input type="tel" name="" id="">
+        <br>Introducir direccion de correo: <input type="email" name="" id>
+        <br>Introducir Password: <input type="password">
+        <br>Opinion sobre la materia de Lenguaje de Marcas y sobre todo, sobre el profe:
+        <br> <textarea name="" id=""> Escribe tu opinion sincera sobre el profe... (Sin Miedo!)</textarea>
+        <br>
+        <input type="submit" value="Guardar">
+        <br><input type="reset" value="Borrar">
+    </form>
+    <hr>
+    <h3>Ejemplo de Formulario con etiquetas basicas de entrada</h3>
+    <form action="mailto:raul.rodriguez@proeducaglobal.com">
+        Nombre de usuario: <input type="text" placeholder="nombre de pila">
+        <br>Introducir direccion de correo: <input type="email" placeholder="raul@unir.fp" required>
+        <br><input type="tel" placeholder="+xx xxx xxx xxx">
+        <br>Introducir Password: <input type="password" placeholder="contrasenia alfanumerica...">
+        <br>Web de contacto: <input type="url" placeholder="https://unir.fp">
+        <br>Opinion:
+        <br> <textarea placeholder="escribe aqui la opinion sobre la materia..." maxlength="5"></textarea>
+        <br>
+        <input type="submit" value="Guardar">
+        <br><input type="reset" value="Borrar">
+    </form>
+    <h2>campos de Entrada de Informacion Numerica</h2>
+    Para poder obtener informacion numerica de nuestros formularios, podemos utilizar dos tipos de campos
+    existentes:
+    <ul>
+        <li>input type=number con el cual estamos indicando que el valor de entrada sera numerico</li>
+        <li>campo de rango: input type=range</li>
+        <li>los atributos que van asociados a estos: min (establece un valor minimo para pasr la validacion)
+            <br>max (numero maximo permitido para pasar la validacion), el step (permite la validacion entre Numeros
+            <br>para pasar la validacion).
+        </li>
+        <br>Ejemplo de Campos Numericos:
+        Introduce un numero: <input type="number" name="" id="">
+        <br>Rango de numeros <input type="range" name="" id="" min="10" max="55" step="5">
+    </ul>
+    <h2>Campos de Entrada Numericos: fecha y hora</h2>
+    Dentro de los formularios de HTML, podemos uitilizar un tipo de input que nos permite estableces elementos
+    <br> de fecha y hora
+    <br>Entre ellos los mas comunes o que mas vamos a utilizar, podemos destacar los siguientes:
+    <ul>
+        <li><b>Fecha</b>: utilizaremos el input = date</li>
+        <li><b>Hora</b>: utilizaremos el input = time</li>
+        <li><b>Fecha y hora local</b>: utilizaremos en input = datetime-local </li>
+        <li><b>Mes</b>: Utilizaremos el input = month</li>
+        <li><b>Semana</b>: utilizaremos em input = week</li>
+    </ul>
+    <br>Ejemplos:
+    <br>Fecha: <input type="date" name="" id="">
+    <br>Hora: <input type="time" name="" id="">
+    <br>Fecha y hora local: <input type="month" name="" id="">
+    <br>Datetime: <input type="datetime" name="" id="">
+    <br>Mes: <input type="mont" name="" id="">
+    <br>Semana: <input type="week" name="" id="">
+    <br> Ejemplo de Formulario con Fechas y Horas con max, min y step
+    <br> Seleccione la Fecha deseada: <input type="date" min="2018-02-23" max="2018-06-23" step="2">
+
+</body>
+
+</html>
